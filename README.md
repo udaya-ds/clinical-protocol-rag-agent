@@ -1,11 +1,9 @@
 # Clinical Trial Protocol RAG + Agentic Extraction
 
 A portfolio project applying RAG and agentic AI techniques to clinical trial
-protocol documents — built to demonstrate the same skills that show up
-repeatedly in current pharma AI Engineer job postings.
+protocol documents.
 
-- Citation-grounded RAG over regulatory/clinical documents (mirrors tools like
-  Elsevier's PharmaPendium AI)
+- Citation-grounded RAG over regulatory/clinical documents
 - Agentic, multi-step structured extraction with auditability (mirrors published
   approaches for automated clinical trial protocol information extraction)
 - Multi-agent orchestration (LangGraph) and MCP-style tool serving
@@ -155,140 +153,38 @@ python agent/deep_research_router.py
 
 ## Status
 
-- [x] PDF text extraction
-- [x] Structured extraction schema (Pydantic) + extract/validate/repair loop
-- [x] Input-side guardrails (OWASP Top 10 for LLM Apps, 2025) — see `GUARDRAILS.md`
-      and `agent/guardrails.py`; documents are structurally screened and checked
-      for injection patterns before entering the extraction pipeline
-- [x] Chunking + ChromaDB embedding (`ingestion/chunker.py` splits protocols by
-      numbered section for semantic coherence; `embeddings/embed_store.py`
-      embeds with SentenceTransformer and supports metadata-filtered retrieval,
-      e.g. filter to "Inclusion Criteria" sections only). Text-only — CLIP/image
-      embedding skipped, not relevant to text protocols. **Note**: model
-      download requires internet access; ChromaDB plumbing verified
-      independently with dummy embeddings in this sandbox.
-- [x] Multi-agent LangGraph pipeline (`agent/agentic_pipeline.py`) — three
-      specialized agents (Eligibility, Endpoint, Design), each scoped to
-      fixed section titles, plus a fourth **General-purpose agent** with NO
-      section filter — all four run in true parallel fan-out, passing
-      results through `scan_context()` guardrails (blocking poisoned chunks
-      before generation), then converging at a Synthesis agent that
-      preserves source citations. The general agent was added after a real
-      finding during testing: a question about placebo preparation fell
-      completely outside all three specialists' scope (drug/placebo prep
-      lives under "Preparation/Handling/Storage/Accountability," not
-      eligibility/endpoint/design), and the LLM filled the gap with a
-      specific-sounding but ungrounded citation instead of saying so.
-      Verified directly: with the three specialists mocked to find nothing
-      (matching the original failure) and the general agent given the real
-      confirmed placebo-prep chunk, the pipeline now produces a correctly
-      grounded, properly cited answer end-to-end.
-- [x] Cross-encoder reranking (`embeddings/reranker.py`) — two-stage
-      retrieval: embedding similarity pulls a larger candidate pool per
-      section, then a cross-encoder (`cross-encoder/ms-marco-MiniLM-L-6-v2`)
-      reranks for precision before chunks reach the LLM. Verified with a
-      mocked model that genuinely relevant chunks correctly outrank noisy
-      matches (e.g. amendment-log table references) that share surface
-      vocabulary with the query but aren't actually responsive.
-- [x] RAG evaluation (`evaluation/eval_rag.py`, `evaluation/rag_eval_set.json`,
-      `evaluation/ir_metrics.py`) — measures retrieval correctness AND final
-      answer quality separately, with a diagnostic distinguishing retrieval
-      failures from generation failures. Adds standard IR ranking metrics
-      (MRR, MAP, NDCG@k) on top of simple hit-rate, since hit-rate alone
-      can't tell a relevant-chunk-at-rank-1 apart from a relevant-chunk-at-
-      rank-3 — verified `ir_metrics.py`'s formulas against hand-calculated
-      worked examples (matches exactly) and confirmed the integration
-      correctly differentiates two "HIT" cases by ranking quality alone.
-- [x] HyDE query transformation (`embeddings/hyde.py`) — generates a
-      hypothetical, corpus-styled passage and embeds it AS A DOCUMENT (no
-      query-instruction prefix) instead of embedding the raw question.
-      Wired as an explicit alternate path (`embed_store.query_with_hyde()`)
-      rather than the default, since our questions are typically specific
-      enough that direct retrieval already performs well - kept as a
-      documented, testable alternative for vaguer queries.
-- [x] Hybrid search (`embeddings/hybrid_search.py`) — BM25 (sparse/keyword)
-      retrieval fused with dense embedding retrieval via Reciprocal Rank
-      Fusion. Specifically targets a real gap: clinical protocols are full
-      of exact identifiers (protocol numbers, drug names) that embeddings
-      don't reliably handle. Verified directly against the real corpus:
-      BM25 correctly identified the right protocol for an exact protocol-
-      number query by a clear score margin, and RRF fusion math confirmed
-      correct (a chunk ranked in both lists outranks one ranked #1 in only
-      one list).
-- [x] Streamlit demo UI (`app/streamlit_app.py`) — interactive Q&A interface
-      showing the final synthesized answer alongside each specialist
-      agent's retrieved context, with visible guardrail status per chunk
-      (allow / redact / block) and rerank scores. Verified the app starts
-      cleanly with a headless smoke test in this sandbox; full end-to-end
-      use needs your `OPENAI_API_KEY` + built index.
-- [x] MCP server (`mcp_server/server.py`, `mcp_server/client_demo.py`) —
-      exposes `list_protocols`, `get_eligibility_criteria`,
-      `get_primary_endpoint`, `ask_protocol_question`, and `deep_research`
-      (5 tools total) wrapping the existing pipelines rather than
-      reimplementing any logic. Caught and fixed two real bugs while
-      testing: (1) `.env` loading needs an explicit file path, since MCP
-      spawns the server as a subprocess with its own clean environment —
-      the original `load_dotenv()` silently failed to find the API key
-      until this was fixed; (2) FastMCP's startup banner AND HuggingFace's
-      model-loading progress bars both write to the same stdout/stderr
-      channels the stdio transport uses for its own JSON-RPC protocol —
-      confirmed directly that this corrupted the connection
-      (`show_banner=False` and `HF_HUB_DISABLE_PROGRESS_BARS=1` fix both).
-      Also added explicit `status: "found"/"not_found"` reporting when a
-      requested `protocol_filename` doesn't match anything indexed,
-      distinguishing "this document isn't available here" from "the
-      document doesn't mention this" — previously both looked identical
-      to the caller. Verified all 5 tools are correctly discovered and
-      `list_protocols` returns real data from this repo's actual processed
-      protocols.
-- [x] Evaluation set (`evaluation/eval_set.json` + `evaluation/run_eval.py`) —
-      hand-verified ground truth for all 5 synthetic protocols (protocol
-      number, phase, indication, design, enrollment, sites, arms, eligibility
-      counts/key phrases, primary endpoint). Scorer logic verified in this
-      sandbox using a simulated extraction output with deliberately injected
-      errors — correctly caught both a wrong scalar value and a truncated
-      eligibility list, while passing all correct fields.
-- [x] ADaM synthetic trial dataset (`data/sas_datasets/`) — CDISC-standard
-      ADSL (subject-level: demographics, arm assignment, disposition) and
-      ADAE (adverse events: term, severity, seriousness, relatedness)
-      datasets, deterministically generated (seeded) and tied to the Gout
-      trial protocol (BP-202606-797) for narrative consistency: 90 subjects
-      across 3 arms (30/30/30), 126 AE records with realistic severity/
-      seriousness distributions. Synthetic — no real patient data, same
-      spirit as the CDISC-generated protocol PDFs.
-- [x] Text-to-SQL dataset lookup (`agent/dataset_lookup.py`) — natural
-      language question -> LLM-generated SQL (executed against an in-memory
-      SQLite database built from the ADaM CSVs) + the equivalent PROC SQL
-      syntax (displayed for SAS-audience readability, not executed — no
-      licensed SAS environment exists here to run it against). Read-only
-      validation gate rejects any non-SELECT statement before execution
-      (the same OWASP-LLM06 Excessive Agency concern as elsewhere in this
-      project's guardrails, applied to a new risk surface: an LLM
-      generating executable code). Verified directly: 10/10 safety-
-      validation test cases correct including a SQL-injection-style
-      multi-statement attempt, real aggregation/filter/join queries
-      execute correctly against the actual generated data, and a real bug
-      was found and fixed — `json.loads(strict=False)` needed to tolerate
-      literal newlines LLMs commonly emit inside multi-line PROC SQL
-      string values, which strict JSON parsing rejects by default.
-- [x] Deep Research router (`agent/deep_research_router.py`,
-      `agent/web_search_tool.py`) — an LLM classifies each question's
-      intent (temperature=0) and routes it to one or more of: protocol RAG,
-      ADaM dataset SQL, or live web search (Tavily), running selected tools
-      in true parallel (`ThreadPoolExecutor`, same fan-out pattern as the
-      4-agent pipeline) before synthesizing a structured markdown report
-      (Summary / Findings-by-source / Key Takeaways) with citations.
-      Routing logic verified with 4 test cases (single-tool x2, multi-tool,
-      and `ALL`-expansion) — all correct. Full end-to-end pipeline (route
-      -> parallel execution -> fusion -> report) verified with mocked tool
-      results, confirming exactly 2 LLM calls total (router + report
-      generator, not one call per tool) and correct true-parallel
-      execution. **Honest caveat**: live web search itself could not be
-      tested in this sandbox (no external network access, no Tavily key
-      available here) — `web_search_tool.py`'s request-building and
-      response-parsing logic is verified by code review and mocked tests
-      only; the actual Tavily API integration needs verification with a
-      real key in your own environment.
+All components below are built and verified — see [ENGINEERING_NOTES.md](ENGINEERING_NOTES.md)
+for the full build/verification history, including real bugs found and
+fixed along the way (chunking edge cases, thread-safety races, MCP
+subprocess quirks, and more).
+
+- [x] PDF text extraction (`ingestion/pdf_extract.py`)
+- [x] Structured extraction with Pydantic validation + auto-repair
+      (`agent/extract_protocol.py`, `agent/extraction_schema.py`)
+- [x] Input-side guardrails, OWASP Top 10 for LLM Apps (`agent/guardrails.py`,
+      `GUARDRAILS.md`)
+- [x] Section-based chunking + ChromaDB embedding (`ingestion/chunker.py`,
+      `embeddings/embed_store.py`)
+- [x] 4-agent LangGraph pipeline with true parallel fan-out + synthesis
+      (`agent/agentic_pipeline.py`)
+- [x] Cross-encoder reranking (`embeddings/reranker.py`)
+- [x] RAG evaluation: hit-rate, MRR, MAP, NDCG, retrieval-vs-generation
+      diagnostics (`evaluation/eval_rag.py`, `evaluation/ir_metrics.py`)
+- [x] HyDE query transformation, opt-in alternate retrieval path
+      (`embeddings/hyde.py`)
+- [x] Hybrid BM25 + dense search via Reciprocal Rank Fusion
+      (`embeddings/hybrid_search.py`)
+- [x] Streamlit demo UI — Protocol Q&A + Deep Research tabs
+      (`app/streamlit_app.py`)
+- [x] MCP server, 5 tools (`mcp_server/server.py`, `mcp_server/client_demo.py`)
+- [x] Extraction accuracy evaluation set (`evaluation/eval_set.json`,
+      `evaluation/run_eval.py`)
+- [x] Synthetic ADaM trial dataset, ADSL + ADAE (`data/sas_datasets/`)
+- [x] Text-to-SQL dataset lookup with PROC SQL display
+      (`agent/dataset_lookup.py`)
+- [x] Deep Research router: intent classification -> parallel tool
+      execution -> synthesized report (`agent/deep_research_router.py`,
+      `agent/web_search_tool.py`)
 
 ## Known limitations — chunked extraction on real (non-synthetic) protocols
 
@@ -313,18 +209,18 @@ limitation of the approach:
   Verified directly against the exact confirmed failure cases.
 
 **Confirmed NOT fixed, and likely inherent to the approach**:
-- **Pfizer's primary endpoint** still extracts safety/reactogenicity
-  content instead of the efficacy endpoint. Root cause: Pfizer's protocol
-  is a single combined Phase 1/2/3 trial that legitimately lists *several*
-  distinct "primary" endpoints side by side (Phase 1 reactogenicity, an
-  immunogenicity non-inferiority comparison, AND Phase 2/3 efficacy) — so
-  "which one is *the* primary endpoint" is itself a document-specific
-  judgment call, not a clear extraction error a keyword filter can
-  reliably resolve.
+- **The combined Phase 1/2/3 trial's primary endpoint** still extracts
+  safety/reactogenicity content instead of the efficacy endpoint. Root
+  cause: that protocol is a single combined Phase 1/2/3 trial that
+  legitimately lists *several* distinct "primary" endpoints side by side
+  (Phase 1 reactogenicity, an immunogenicity non-inferiority comparison,
+  AND Phase 2/3 efficacy) — so "which one is *the* primary endpoint" is
+  itself a document-specific judgment call, not a clear extraction error
+  a keyword filter can reliably resolve.
 - **Run-to-run extraction variance** — re-running extraction on the
-  identical AZ document produced *different* (and differently wrong)
-  `treatment_arms` results across runs (verbose dosing descriptions in one
-  run, overly generic `['saline', 'vaccine']` in another), despite
+  identical real-protocol document produced *different* (and differently
+  wrong) `treatment_arms` results across runs (verbose dosing descriptions
+  in one run, overly generic `['saline', 'vaccine']` in another), despite
   `temperature=0`. For sufficiently long/complex source text, the model's
   chosen level of abstraction when summarizing isn't perfectly stable run
   to run, and the merge logic can only choose among whatever candidates a
