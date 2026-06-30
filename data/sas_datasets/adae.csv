@@ -1,0 +1,127 @@
+STUDYID,USUBJID,AESEQ,AEDECOD,AEBODSYS,AESEV,AESER,AEREL,AESTDTC,AEENDTC,AEOUT,TRTA
+BP-202606-797,BP-202606-797-001,1,Fatigue,General disorders and administration site conditions,MODERATE,N,POSSIBLY RELATED,2026-05-08,2026-05-22,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-003,1,Gout Flare,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-04-21,2026-04-27,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-004,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-05-23,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-004,2,Hypertension,Vascular disorders,MODERATE,N,POSSIBLY RELATED,2026-05-09,2026-05-15,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-005,1,Arthralgia,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-06-18,2026-07-03,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-005,2,Nausea,Gastrointestinal disorders,MILD,N,RELATED,2026-04-23,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-007,1,Hypertension,Vascular disorders,SEVERE,Y,POSSIBLY RELATED,2026-06-20,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-007,2,Hypertension,Vascular disorders,MILD,N,RELATED,2026-06-11,2026-06-21,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-007,3,Hypertension,Vascular disorders,SEVERE,Y,NOT RELATED,2026-06-18,2026-06-24,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-008,1,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,RELATED,2026-04-03,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-009,1,Renal Impairment,Renal and urinary disorders,SEVERE,N,RELATED,2026-04-13,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-010,1,Gout Flare,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-03-04,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-012,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-05-23,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-012,2,Hypertension,Vascular disorders,SEVERE,Y,POSSIBLY RELATED,2026-05-18,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-012,3,Injection Site Reaction,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-04-09,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-014,1,Hypertension,Vascular disorders,SEVERE,Y,NOT RELATED,2026-03-07,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-015,1,Injection Site Reaction,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-04-30,2026-05-17,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-015,2,Hypertension,Vascular disorders,MILD,N,NOT RELATED,2026-04-26,2026-04-29,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-015,3,Hypertension,Vascular disorders,MODERATE,N,POSSIBLY RELATED,2026-04-24,2026-05-05,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-015,4,Elevated Liver Enzymes,Investigations,SEVERE,N,NOT RELATED,2026-05-06,2026-05-26,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-016,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-06-02,2026-06-23,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-016,2,Renal Impairment,Renal and urinary disorders,MODERATE,N,POSSIBLY RELATED,2026-05-16,2026-05-18,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-017,1,Injection Site Reaction,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-03-15,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-019,1,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,NOT RELATED,2026-03-04,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-020,1,Arthralgia,Musculoskeletal and connective tissue disorders,MODERATE,N,RELATED,2026-03-03,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-022,1,Injection Site Reaction,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-05-10,2026-05-25,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-024,1,Hypertension,Vascular disorders,MILD,N,RELATED,2026-06-13,2026-07-02,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-025,1,Headache,Nervous system disorders,MODERATE,N,RELATED,2026-04-24,2026-05-14,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-025,2,Renal Impairment,Renal and urinary disorders,SEVERE,N,NOT RELATED,2026-03-12,2026-03-20,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-026,1,Elevated Liver Enzymes,Investigations,MODERATE,N,NOT RELATED,2026-04-03,2026-04-13,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-026,2,Anaphylactic Reaction,Immune system disorders,SEVERE,Y,POSSIBLY RELATED,2026-01-29,2026-02-08,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-027,1,Gout Flare,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-04-12,2026-04-18,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-028,1,Hypertension,Vascular disorders,MODERATE,N,NOT RELATED,2026-05-13,2026-05-28,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-028,2,Nausea,Gastrointestinal disorders,MILD,N,NOT RELATED,2026-04-28,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-028,3,Injection Site Reaction,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-04-01,2026-04-19,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-029,1,Renal Impairment,Renal and urinary disorders,SEVERE,Y,POSSIBLY RELATED,2026-03-17,2026-03-25,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-030,1,Fatigue,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-03-24,2026-04-14,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-030,2,Hypertension,Vascular disorders,MODERATE,N,NOT RELATED,2026-03-10,2026-03-12,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-032,1,Nausea,Gastrointestinal disorders,MILD,N,NOT RELATED,2026-02-18,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-033,1,Renal Impairment,Renal and urinary disorders,SEVERE,N,NOT RELATED,2026-04-10,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-033,2,Nausea,Gastrointestinal disorders,MODERATE,N,NOT RELATED,2026-04-26,2026-05-08,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-033,3,Gout Flare,Musculoskeletal and connective tissue disorders,SEVERE,N,RELATED,2026-05-07,2026-05-19,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-034,1,Injection Site Reaction,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-02-10,2026-02-25,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-034,2,Nausea,Gastrointestinal disorders,MILD,N,NOT RELATED,2026-04-03,2026-04-05,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-034,3,Anaphylactic Reaction,Immune system disorders,SEVERE,Y,RELATED,2026-03-30,2026-04-02,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-034,4,Anaphylactic Reaction,Immune system disorders,SEVERE,Y,RELATED,2026-02-15,2026-02-20,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-036,1,Diarrhoea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-02-25,2026-02-26,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-037,1,Anaphylactic Reaction,Immune system disorders,MODERATE,N,POSSIBLY RELATED,2026-03-03,2026-03-12,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-038,1,Fatigue,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-04-10,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-038,2,Fatigue,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-03-09,2026-03-26,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-039,1,Headache,Nervous system disorders,MILD,N,NOT RELATED,2026-04-17,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-039,2,Hypertension,Vascular disorders,SEVERE,Y,RELATED,2026-05-13,2026-05-16,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-040,1,Rash,Skin and subcutaneous tissue disorders,MILD,N,POSSIBLY RELATED,2026-05-01,2026-05-16,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-040,2,Fatigue,General disorders and administration site conditions,MODERATE,N,RELATED,2026-02-28,2026-03-14,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-041,1,Injection Site Reaction,General disorders and administration site conditions,MODERATE,N,POSSIBLY RELATED,2026-03-20,2026-04-03,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-042,1,Diarrhoea,Gastrointestinal disorders,MODERATE,N,RELATED,2026-01-22,2026-02-05,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-043,1,Anaphylactic Reaction,Immune system disorders,MODERATE,N,POSSIBLY RELATED,2026-06-21,2026-06-25,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-043,2,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,NOT RELATED,2026-05-31,2026-06-10,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-044,1,Rash,Skin and subcutaneous tissue disorders,MILD,N,RELATED,2026-04-24,2026-04-28,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-045,1,Nausea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-05-24,2026-06-13,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-045,2,Elevated Liver Enzymes,Investigations,MODERATE,N,RELATED,2026-05-04,2026-05-15,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-046,1,Diarrhoea,Gastrointestinal disorders,MODERATE,N,RELATED,2026-03-15,2026-04-01,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-047,1,Injection Site Reaction,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-04-28,2026-04-30,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-048,1,Headache,Nervous system disorders,MILD,N,RELATED,2026-04-01,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-048,2,Hypertension,Vascular disorders,SEVERE,Y,NOT RELATED,2026-02-20,2026-03-06,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-049,1,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,POSSIBLY RELATED,2026-03-16,2026-03-24,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-049,2,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,RELATED,2026-03-15,2026-03-20,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-051,1,Hypertension,Vascular disorders,SEVERE,Y,POSSIBLY RELATED,2026-04-09,2026-04-12,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-052,1,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,POSSIBLY RELATED,2026-04-09,2026-04-28,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-052,2,Upper Respiratory Tract Infection,Infections and infestations,MODERATE,N,NOT RELATED,2026-05-23,2026-05-27,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-053,1,Diarrhoea,Gastrointestinal disorders,MODERATE,N,NOT RELATED,2026-04-25,2026-05-09,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-053,2,Nausea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-04-30,2026-05-13,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-053,3,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,RELATED,2026-03-31,2026-04-17,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-053,4,Elevated Liver Enzymes,Investigations,MILD,N,POSSIBLY RELATED,2026-04-03,2026-04-15,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-057,1,Gout Flare,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-03-10,2026-03-31,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-058,1,Anaphylactic Reaction,Immune system disorders,SEVERE,N,NOT RELATED,2026-06-10,2026-07-01,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-058,2,Injection Site Reaction,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-05-29,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-059,1,Headache,Nervous system disorders,MILD,N,POSSIBLY RELATED,2026-03-13,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-060,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-04-17,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-061,1,Renal Impairment,Renal and urinary disorders,MODERATE,N,POSSIBLY RELATED,2026-05-06,2026-05-17,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-061,2,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,POSSIBLY RELATED,2026-03-01,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-061,3,Anaphylactic Reaction,Immune system disorders,SEVERE,N,RELATED,2026-03-16,2026-03-24,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-061,4,Renal Impairment,Renal and urinary disorders,SEVERE,N,POSSIBLY RELATED,2026-05-11,2026-05-23,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-062,1,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,NOT RELATED,2026-02-19,2026-02-22,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-063,1,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,RELATED,2026-06-21,2026-07-02,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-063,2,Nausea,Gastrointestinal disorders,MILD,N,NOT RELATED,2026-05-14,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-064,1,Arthralgia,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-03-11,2026-03-28,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-064,2,Nausea,Gastrointestinal disorders,MODERATE,N,POSSIBLY RELATED,2026-01-30,2026-02-09,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-064,3,Diarrhoea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-03-31,2026-04-08,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-066,1,Anaphylactic Reaction,Immune system disorders,MODERATE,N,POSSIBLY RELATED,2026-06-04,2026-06-15,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-068,1,Diarrhoea,Gastrointestinal disorders,MILD,N,RELATED,2026-06-12,2026-06-27,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-068,2,Headache,Nervous system disorders,MODERATE,N,POSSIBLY RELATED,2026-04-24,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-069,1,Hypertension,Vascular disorders,MODERATE,N,POSSIBLY RELATED,2026-02-21,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-069,2,Injection Site Reaction,General disorders and administration site conditions,MODERATE,N,POSSIBLY RELATED,2026-02-18,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-070,1,Gout Flare,Musculoskeletal and connective tissue disorders,MODERATE,N,NOT RELATED,2026-02-09,,NOT RECOVERED/NOT RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-070,2,Fatigue,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-04-10,2026-04-20,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-070,3,Nausea,Gastrointestinal disorders,MILD,N,RELATED,2026-04-09,2026-04-23,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-070,4,Nausea,Gastrointestinal disorders,MILD,N,NOT RELATED,2026-03-19,2026-04-02,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-071,1,Gout Flare,Musculoskeletal and connective tissue disorders,SEVERE,N,POSSIBLY RELATED,2026-02-25,2026-03-01,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-071,2,Renal Impairment,Renal and urinary disorders,SEVERE,Y,RELATED,2026-02-26,2026-03-14,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-073,1,Hypertension,Vascular disorders,MILD,N,NOT RELATED,2026-02-28,2026-03-07,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-073,2,Diarrhoea,Gastrointestinal disorders,MODERATE,N,RELATED,2026-04-03,2026-04-13,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-074,1,Elevated Liver Enzymes,Investigations,SEVERE,Y,NOT RELATED,2026-04-09,2026-04-30,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-075,1,Diarrhoea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-05-27,2026-06-04,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-076,1,Elevated Liver Enzymes,Investigations,MILD,N,POSSIBLY RELATED,2026-04-28,2026-05-15,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-077,1,Fatigue,General disorders and administration site conditions,MILD,N,POSSIBLY RELATED,2026-04-16,2026-05-07,RECOVERED/RESOLVED,Standard of Care
+BP-202606-797,BP-202606-797-077,2,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,RELATED,2026-02-17,2026-02-20,RECOVERING/RESOLVING,Standard of Care
+BP-202606-797,BP-202606-797-078,1,Elevated Liver Enzymes,Investigations,MILD,N,NOT RELATED,2026-03-19,2026-03-21,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-078,2,Injection Site Reaction,General disorders and administration site conditions,MILD,N,NOT RELATED,2026-02-27,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-079,1,Nausea,Gastrointestinal disorders,MODERATE,N,RELATED,2026-03-15,2026-03-22,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-079,2,Headache,Nervous system disorders,MILD,N,NOT RELATED,2026-04-24,,NOT RECOVERED/NOT RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-079,3,Hypertension,Vascular disorders,MODERATE,N,RELATED,2026-03-14,2026-03-26,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-081,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-05-20,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-081,2,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,NOT RELATED,2026-05-28,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-083,1,Renal Impairment,Renal and urinary disorders,SEVERE,Y,NOT RELATED,2026-03-14,2026-03-25,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-083,2,Nausea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-03-28,2026-04-12,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-083,3,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,RELATED,2026-04-16,2026-05-01,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-084,1,Injection Site Reaction,General disorders and administration site conditions,MODERATE,N,RELATED,2026-03-17,2026-04-07,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-084,2,Upper Respiratory Tract Infection,Infections and infestations,MILD,N,POSSIBLY RELATED,2026-03-30,2026-04-04,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-084,3,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,RELATED,2026-03-18,2026-04-08,RECOVERED/RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-085,1,Rash,Skin and subcutaneous tissue disorders,MILD,N,NOT RELATED,2026-05-27,2026-06-08,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-086,1,Diarrhoea,Gastrointestinal disorders,MILD,N,POSSIBLY RELATED,2026-03-08,2026-03-12,RECOVERED/RESOLVED,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-087,1,Fatigue,General disorders and administration site conditions,MODERATE,N,NOT RELATED,2026-03-05,2026-03-14,RECOVERING/RESOLVING,Hydroxychloroquine Low Dose
+BP-202606-797,BP-202606-797-089,1,Renal Impairment,Renal and urinary disorders,SEVERE,Y,RELATED,2026-04-13,,NOT RECOVERED/NOT RESOLVED,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-089,2,Renal Impairment,Renal and urinary disorders,SEVERE,N,NOT RELATED,2026-05-14,2026-05-17,RECOVERING/RESOLVING,Belimumab Medium Dose
+BP-202606-797,BP-202606-797-090,1,Arthralgia,Musculoskeletal and connective tissue disorders,MILD,N,NOT RELATED,2026-03-11,2026-03-28,RECOVERING/RESOLVING,Standard of Care

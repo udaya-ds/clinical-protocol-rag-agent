@@ -1,0 +1,115 @@
+{
+  "description": "Hand-verified ground truth fields, read directly from the source protocol PDFs, for measuring agent/extract_protocol.py's accuracy. Scalar fields use exact match; list fields (inclusion/exclusion/endpoints) use set-overlap scoring since wording may vary slightly between extraction runs. expected=null means this field has not been independently verified yet (skipped during scoring, not auto-failed) - see run_eval.py's handling of skipped_unverified.",
+  "cases": [
+    {
+      "source_file": "study_protocol_phase_3_20260619_045037.txt",
+      "expected": {
+        "protocol_number": "BP-202606-731",
+        "phase": "Phase 3",
+        "indication": "Leukemia",
+        "study_design": "Non-Randomized Observational Study",
+        "treatment_duration_weeks": 12,
+        "planned_enrollment": 90,
+        "number_of_sites": 41,
+        "treatment_arms": ["Cisplatin High Dose", "Doxorubicin High Dose", "Standard of Care"],
+        "eligibility": {
+          "inclusion_count": 6,
+          "exclusion_count": 6,
+          "inclusion_contains": ["aged 18-75", "Confirmed diagnosis of Leukemia", "informed consent"],
+          "exclusion_contains": ["hypersensitivity", "malignancy within the past 5 years", "Pregnant or nursing"]
+        },
+        "endpoints": {
+          "primary": "Progression-free survival (PFS)."
+        }
+      }
+    },
+    {
+      "source_file": "study_protocol_phase_3_20260619_045654.txt",
+      "expected": {
+        "protocol_number": "BP-202606-843",
+        "phase": "Phase 3",
+        "indication": "Prostate Cancer",
+        "study_design": "Single-Arm, Open-Label Study",
+        "treatment_duration_weeks": 12,
+        "planned_enrollment": 90,
+        "number_of_sites": 32,
+        "treatment_arms": ["Bevacizumab Low Dose", "Doxorubicin High Dose", "Standard of Care"],
+        "eligibility": {
+          "inclusion_count": 6,
+          "exclusion_count": 6,
+          "inclusion_contains": ["aged 18-75", "Confirmed diagnosis of Prostate Cancer", "informed consent"],
+          "exclusion_contains": ["hypersensitivity", "malignancy within the past 5 years", "Pregnant or nursing"]
+        },
+        "endpoints": {
+          "primary": "Progression-free survival (PFS)."
+        }
+      }
+    },
+    {
+      "source_file": "study_protocol_phase_3_20260619_050007.txt",
+      "expected": {
+        "protocol_number": "BP-202606-797",
+        "phase": "Phase 3",
+        "indication": "Gout",
+        "study_design": "Non-Randomized Observational Study",
+        "treatment_duration_weeks": 12,
+        "planned_enrollment": 90,
+        "number_of_sites": 37,
+        "treatment_arms": ["Belimumab Medium Dose", "Hydroxychloroquine Low Dose", "Standard of Care"],
+        "eligibility": {
+          "inclusion_count": 6,
+          "exclusion_count": 6,
+          "inclusion_contains": ["aged 18-75", "Confirmed diagnosis of Gout", "informed consent"],
+          "exclusion_contains": ["hypersensitivity", "malignancy within the past 5 years", "Pregnant or nursing"]
+        },
+        "endpoints": {
+          "primary": "Change from baseline in Gout severity score at Week 12."
+        }
+      }
+    },
+    {
+      "source_file": "study_protocol_phase_3_20260619_050338.txt",
+      "expected": {
+        "protocol_number": "BP-202606-922",
+        "phase": "Phase 3",
+        "indication": "Atrial Fibrillation",
+        "study_design": "Randomized, Open-Label, Parallel Group Study",
+        "treatment_duration_weeks": 12,
+        "planned_enrollment": 90,
+        "number_of_sites": 33,
+        "treatment_arms": ["Warfarin High Dose", "Metoprolol Medium Dose", "Standard of Care"],
+        "eligibility": {
+          "inclusion_count": 6,
+          "exclusion_count": 6,
+          "inclusion_contains": ["aged 18-75", "Confirmed diagnosis of Atrial Fibrillation", "informed consent"],
+          "exclusion_contains": ["hypersensitivity", "malignancy within the past 5 years", "Pregnant or nursing"]
+        },
+        "endpoints": {
+          "primary": "Time to first occurrence of major adverse cardiovascular event (MACE)."
+        }
+      }
+    },
+    {
+      "source_file": "study_protocol_phase_3_20260619_050536.txt",
+      "expected": {
+        "protocol_number": "BP-202606-949",
+        "phase": "Phase 3",
+        "indication": "Neuropathic Pain",
+        "study_design": "Randomized, Crossover Study",
+        "treatment_duration_weeks": 12,
+        "planned_enrollment": 90,
+        "number_of_sites": 21,
+        "treatment_arms": ["Gabapentin Low Dose", "Carbidopa Low Dose", "Standard of Care"],
+        "eligibility": {
+          "inclusion_count": 6,
+          "exclusion_count": 6,
+          "inclusion_contains": ["aged 18-75", "Confirmed diagnosis of Neuropathic Pain", "informed consent"],
+          "exclusion_contains": ["hypersensitivity", "malignancy within the past 5 years", "Pregnant or nursing"]
+        },
+        "endpoints": {
+          "primary": "Change from baseline in neurological function score at Week 12."
+        }
+      }
+    }    
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "description": "Tests the RAG pipeline end-to-end (retrieval correctness + final answer quality), as opposed to evaluation/eval_set.json which only scores the extraction step. Each case specifies: which agent's retrieval should fire, which section(s) the retrieved chunks SHOULD come from, and which key facts the final synthesized answer MUST contain (checked as case-insensitive substrings - simple and explainable, not an LLM-as-judge, so results are easy to audit by hand).",
+  "cases": [
+    {
+      "question": "What are the inclusion and exclusion criteria for the leukemia trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_045037.txt",
+      "agent": "eligibility",
+      "expected_section_titles": ["Inclusion Criteria", "Exclusion Criteria", "Study Population"],
+      "expected_answer_keywords": ["18-75", "Leukemia", "informed consent", "malignancy"]
+    },
+    {
+      "question": "What is the primary efficacy endpoint for the prostate cancer trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_045654.txt",
+      "agent": "endpoint",
+      "expected_section_titles": ["Efficacy Assessments"],
+      "expected_answer_keywords": ["progression-free survival", "PFS"]
+    },
+    {
+      "question": "What is the primary efficacy endpoint for the gout trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_050007.txt",
+      "agent": "endpoint",
+      "expected_section_titles": ["Efficacy Assessments"],
+      "expected_answer_keywords": ["Gout severity score", "baseline", "Week 12"]
+    },
+    {
+      "question": "What is the primary efficacy endpoint for the atrial fibrillation trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_050338.txt",
+      "agent": "endpoint",
+      "expected_section_titles": ["Efficacy Assessments"],
+      "expected_answer_keywords": ["major adverse cardiovascular event", "MACE"]
+    },
+    {
+      "question": "What is the study design and treatment duration for the neuropathic pain trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_050536.txt",
+      "agent": "design",
+      "expected_section_titles": ["Study Design", "Overview of Study Design"],
+      "expected_answer_keywords": ["Crossover", "12 week"]
+    },
+    {
+      "question": "What are the treatment arms for the atrial fibrillation trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_050338.txt",
+      "agent": "design",
+      "expected_section_titles": ["Study Design", "Overview of Study Design"],
+      "expected_answer_keywords": ["Warfarin", "Metoprolol", "Standard of Care"]
+    },
+    {
+      "question": "What are the inclusion criteria for the gout trial?",
+      "protocol_filter": "study_protocol_phase_3_20260619_050007.txt",
+      "agent": "eligibility",
+      "expected_section_titles": ["Inclusion Criteria", "Study Population"],
+      "expected_answer_keywords": ["18-75", "Gout", "informed consent"]
+    }
+  ]
+}

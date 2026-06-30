@@ -1,0 +1,20 @@
+# Real-world protocol PDFs used for local pipeline testing only.
+# These are publicly posted by their sponsors for trial transparency,
+# but are NOT licensed for redistribution - never commit these.
+local_test_data/
+
+# Standard Python/venv noise
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Generated/cached data (regenerate via ingestion scripts instead of committing)
+data/processed/
+data/structured/
+data/clinicaltrials_api/
+
+# ChromaDB local persistence
+chroma_db/
+*.sqlite3
